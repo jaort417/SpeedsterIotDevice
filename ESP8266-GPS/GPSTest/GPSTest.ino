@@ -316,7 +316,6 @@ void loop()                     // run over and over again
       Serial.print(Adafruit_GPS.minute); Serial.print(':');
       Serial.print(Adafruit_GPS.seconds); Serial.print('.');
       float velocity = readSpeed();
-      globalCalories += calcCalories(velocity);
       long day = readDay();
       uint8_t month = readMonth();
       uint8_t year = readYear();
@@ -327,6 +326,7 @@ void loop()                     // run over and over again
       bool fix = Adafruit_GPS.fix;
       Serial.println(fix);
       if(fix){
+        globalCalories += calcCalories(velocity)/9;
         digitalWrite(5, LOW);
         Serial.println("GOT A FIX");
       }
@@ -351,33 +351,6 @@ void loop()                     // run over and over again
               temperatureAlert = true;
           }
       }
-      /*
-      if (std::isnan(day))
-      {
-          root[day] = NULL;
-      }
-      else
-      {
-          root["day"] = day;  
-      }
-      /*
-      if (std::isnan(month))
-      {
-          root[month] = NULL;
-      }
-      else
-      {
-          root["month"] = month;  
-      }
-      if (std::isnan(year))
-      {
-          root[year] = NULL;
-      }
-      else
-      {
-          root["year"] = year;  
-      }
-      */
       if (std::isnan(globalCalories))
       {
           root["calories"] = NULL;
