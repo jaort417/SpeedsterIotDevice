@@ -378,13 +378,13 @@ void loop()                     // run over and over again
           root["year"] = year;  
       }
       */
-      if (std::isnan(calories))
+      if (std::isnan(globalCalories))
       {
           root["calories"] = NULL;
       }
       else
       {
-          root["calories"] = calories;
+          root["calories"] = globalCalories;
       }
       if (std::isnan(latitude))
       {
