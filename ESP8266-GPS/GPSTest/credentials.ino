@@ -25,8 +25,12 @@ void readCredentials()
     //ssid = "PDS-Resident";
     //pass = "AC86fm!6";
 
-    ssid = "UCInet Mobile Access";
-    pass = "";
+    //ssid = "UCInet Mobile Access";
+    //pass = "";
+
+    ssid = "Pixel_8450";
+    pass = "5ae54e6eca5f";
+    
     connectionString ="HostName=SpeedsterHub.azure-devices.net;DeviceId=SpeedsterDemo;SharedAccessKey=Vn+XZN1UWxrGPW7H+jeW/g9VpkxIdoTfaGdH1HHTebo="; //CHANGE THIS
 
     // read from Serial and save to EEPROM
