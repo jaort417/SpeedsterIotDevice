@@ -232,7 +232,7 @@ int calcJoules(int velocity){
 
 int calcCalories(int velocity)
 {
-  int calories = calcJoules(velocity)/4184;
+  int calories = calcJoules(velocity)/4.184;
   //globalCalories += calories;
   return calories;
 }
