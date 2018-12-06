@@ -1,2 +1,0 @@
-# Speedster
-IoT Smart Skateboard
